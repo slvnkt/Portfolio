@@ -1,0 +1,228 @@
+// Settings
+$minWidth: 320;
+$maxWidthContainer: 1170;
+$containerPadding: 110;
+
+$tablet: em(767.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+//colors
+$mainDarkColor: #1c1f25;
+$textDarcColor: #212121;
+
+@font-face {
+    font-family: "Criteria CF";
+    src: url("../assets/src/fonts/criteria_cf_demibold-webfont.eot");
+    src: url("../assets/src/fonts/criteria_cf_demibold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../assets/src/fonts/criteria_cf_demibold-webfont.woff2") format("woff2"),
+        url("../assets/src/fonts/criteria_cf_demibold-webfont.woff") format("woff"),
+        url("../assets/src/fonts/criteria_cf_demibold-webfont.ttf") format("truetype"),
+        url("../assets/src/fonts/criteria_cf_demibold-webfont.svg#criteria_cfdemibold") format("svg");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Criteria CF";
+    src: url("../assets/src/fonts/criteria_cf_extrabold-webfont.eot");
+    src: url("../assets/src/fonts/criteria_cf_extrabold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../assets/src/fonts/criteria_cf_extrabold-webfont.woff2") format("woff2"),
+        url("../assets/src/fonts/criteria_cf_extrabold-webfont.woff") format("woff"),
+        url("../assets/src/fonts/criteria_cf_extrabold-webfont.ttf") format("truetype"),
+        url("../assets/src/fonts/criteria_cf_extrabold-webfont.svg#criteria_cfextrabold") format("svg");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Criteria CF";
+    src: url("../assets/src/fonts/criteria_cf_extralight-webfont.eot");
+    src: url("../assets/src/fonts/criteria_cf_extralight-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../assets/src/fonts/criteria_cf_extralight-webfont.woff2") format("woff2"),
+        url("../assets/src/fonts/criteria_cf_extralight-webfont.woff") format("woff"),
+        url("../assets/src/fonts/criteria_cf_extralight-webfont.ttf") format("truetype"),
+        url("../assets/src/fonts/criteria_cf_extralight-webfont.svg#criteria_cfextralight") format("svg");
+    font-weight: 275;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Criteria CF";
+    src: url("../assets/src/fonts/criteria_cf_light-webfont.eot");
+    src: url("../assets/src/fonts/criteria_cf_light-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../assets/src/fonts/criteria_cf_light-webfont.woff2") format("woff2"),
+        url("../assets/src/fonts/criteria_cf_light-webfont.woff") format("woff"),
+        url("../assets/src/fonts/criteria_cf_light-webfont.ttf") format("truetype"),
+        url("../assets/src/fonts/criteria_cf_light-webfont.svg#criteria_cflight") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Criteria CF";
+    src: url("../assets/src/fonts/criteria_cf_medium-webfont.eot");
+    src: url("../assets/src/fonts/criteria_cf_medium-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../assets/src/fonts/criteria_cf_medium-webfont.woff2") format("woff2"),
+        url("../assets/src/fonts/criteria_cf_medium-webfont.woff") format("woff"),
+        url("../assets/src/fonts/criteria_cf_medium-webfont.ttf") format("truetype"),
+        url("../assets/src/fonts/criteria_cf_medium-webfont.svg#criteria_cfmedium") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Criteria CF";
+    src: url("../assets/src/fonts/criteria_cf_regular-webfont.eot");
+    src: url("../assets/src/fonts/criteria_cf_regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../assets/src/fonts/criteria_cf_regular-webfont.woff2") format("woff2"),
+        url("../assets/src/fonts/criteria_cf_regular-webfont.woff") format("woff"),
+        url("../assets/src/fonts/criteria_cf_regular-webfont.ttf") format("truetype"),
+        url("../assets/src/fonts/criteria_cf_regular-webfont.svg#criteria_cfregular") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Criteria CF";
+    src: url("../assets/src/fonts/criteria_cf_thin-webfont.eot");
+    src: url("../assets/src/fonts/criteria_cf_thin-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../assets/src/fonts/criteria_cf_thin-webfont.woff2") format("woff2"),
+        url("../assets/src/fonts/criteria_cf_thin-webfont.woff") format("woff"),
+        url("../assets/src/fonts/criteria_cf_thin-webfont.ttf") format("truetype"),
+        url("../assets/src/fonts/criteria_cf_thin-webfont.svg#criteria_cfthin") format("svg");
+    font-weight: 250;
+    font-style: normal;
+}
+
+//icons-font
+
+@font-face {
+    font-family: "icons";
+    src: url("../assets/src/icons-font/icons.eot?abgotd");
+    src: url("../assets/src/icons-font/icons.eot?abgotd#iefix") format("embedded-opentype"),
+        url("../assets/src/icons-font/icons.ttf?abgotd") format("truetype"),
+        url("../assets/src/icons-font/icons.woff?abgotd") format("woff"),
+        url("../assets/src/icons-font/icons.svg?abgotd#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icons" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-be:before {
+    content: "\e900";
+    color: #f5f5f7;
+}
+._icon-email:before {
+    content: "\e901";
+    color: #f5f5f7;
+}
+._icon-in:before {
+    content: "\e902";
+    color: #f5f5f7;
+}
+._icon-tg:before {
+    content: "\e903";
+    color: #f5f5f7;
+}
+
+[class*="__container"] {
+    max-width: rem($maxWidthContainer);
+    box-sizing: content-box;
+    margin: 0 auto;
+    @include adaptive-value("padding-left", 25, 10, 1, 320, 768);
+    @include adaptive-value("padding-right", 25, 10, 1, 320, 768);
+    @media (min-width: $tablet) {
+        padding: 0 rem(math.div($containerPadding, 2));
+    }
+
+    @media (max-width: em(1280)) and (min-width: em(767.98)) {
+        @include adaptive-value("padding-left", 55, 25, 1, 768);
+        @include adaptive-value("padding-right", 55, 25, 1, 768);
+    }
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: "Criteria CF" !important;
+    font-weight: 400;
+
+    background: #1d1d1f;
+    color: #f5f5f7;
+    font-size: rem(16);
+    overflow-x: hidden;
+
+    &._lock {
+        overflow: hidden;
+    }
+}
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 100%;
+        transform: translate(0, -50%);
+        right: 0;
+        width: rem(326);
+        height: rem(342);
+        border-radius: 50%;
+        background: #32e6e2;
+        filter: blur(330px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+#blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    backdrop-filter: blur(12vmax);
+}

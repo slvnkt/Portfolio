@@ -1,0 +1,56 @@
+.icon-menu {
+    @media (max-width: em(870)) {
+        margin: rem(5);
+        z-index: 100;
+        display: block;
+        position: relative;
+        width: rem(38);
+        height: rem(24);
+        cursor: pointer;
+
+        &::before,
+        &::after,
+        & span {
+            content: "";
+
+            position: absolute;
+            height: rem(2);
+
+            transition: all 0.3s ease 0s;
+            background-color: #fff;
+        }
+        &::before,
+        &::after {
+            content: "";
+        }
+        &::before {
+            right: 0;
+            width: rem(20);
+            top: 0;
+        }
+        &::after {
+            left: 0;
+            width: rem(20);
+            bottom: 0;
+        }
+        & span {
+            left: 0;
+            width: 100%;
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+        }
+        &._active span {
+            transform: scale(0);
+        }
+        &._active::before {
+            width: 100%;
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, 0%);
+        }
+        &._active::after {
+            width: 100%;
+            top: 50%;
+            transform: rotate(45deg) translate(0px, 0%);
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.header {
+    position: fixed;
+    min-height: rem(60);
+    width: 100%;
+    @include adaptive-value("padding-top", 16, 7, 1);
+    @include adaptive-value("padding-bottom", 16, 7, 1);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        position: relative;
+        z-index: 100;
+        @include adaptive-value("width", 88, 63, 1, 322, 768);
+        @include adaptive-value("height", 36, 26, 1, 322, 768);
+    }
+
+    &__nav {
+    }
+
+    &__menu {
+    }
+}
+
+.nav-header {
+    &__list {
+        display: flex;
+        column-gap: rem(32);
+        line-height: 1.4;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        transition: color 0.2s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                color: #32e6e2;
+                transition: color 0.2s ease;
+            }
+        }
+    }
+}
+.menu {
+    @media (max-width: em(870)) {
+        display: block;
+    }
+    &__icon {
+    }
+
+    &__body {
+        background: rgba(29, 29, 31, 0.97);
+        backdrop-filter: blur(12px);
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        left: 130%;
+        transition: left 0.3s ease;
+        width: 50vw;
+        height: 100vh;
+        @include adaptive-value("padding-top", 90, 70, 1, 322, 768);
+        @include adaptive-value("padding-right", 55, 25, 1, 768);
+        overflow: auto;
+        &._active {
+            transition: left 0.3s ease;
+            left: 50%;
+        }
+
+        & .nav-header__list {
+            flex-direction: column;
+            align-items: end;
+            row-gap: rem(32);
+        }
+        @media (max-width: em(675)) {
+            width: 100vw;
+            &._active {
+                transition: left 0.3s ease;
+                left: 0%;
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        row-gap: rem(32);
+    }
+}
+
+.social-menu {
+    &__item:first-child {
+        margin-top: rem(32);
+        line-height: 1.4;
+        font-weight: 400;
+    }
+    &__item {
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        column-gap: rem(10);
+        &::before {
+            font-size: rem(18);
+        }
+    }
+}
+
+.icon-menu {
+}
