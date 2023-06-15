@@ -816,10 +816,10 @@ body._lock {
   height: 21.375rem;
   border-radius: 50%;
   background: #32e6e2;
-  filter: blur(330px);
+/*   filter: blur(330px);
   -moz-filter: blur(330px);
   -webkit-filter: blur(330px);
-  -o-filter: blur(330px);
+  -o-filter: blur(330px); */
 }
 @media (max-width: 20em) {
   .main-block {
